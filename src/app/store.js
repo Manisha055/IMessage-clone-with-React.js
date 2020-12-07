@@ -1,8 +1,12 @@
 import { configureStore } from '@reduxjs/toolkit';
-import counterReducer from '../features/counter/counterSlice';
+import { composeWithDevTools } from 'redux-devtools-extension';
+import userReducer from '../features/userSlice';
+import chatReducer from '../features/chatSlice';
+
 
 export default configureStore({
   reducer: {
-    counter: counterReducer,
+    user:userReducer,
+    chat: chatReducer,
   },
 });
